@@ -48,8 +48,8 @@ The container is configured via environment variables:
 ### 1. Clone the repo
 
 ``` bash
-git clone https://github.com/yourusername/debridlink-strm-generator.git
-cd debridlink-strm-generator
+git clone https://github.com/yourusername/strm-generator.git
+cd strm-generator
 ```
 
 ### 2. Create `.env` file
