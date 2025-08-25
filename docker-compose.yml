@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  strm-generator:
+    build: .
+    container_name: strm-generator
+    environment:
+      - API_TOKEN=${API_TOKEN}
+      - OUTPUT_DIR=/jellyfin_strm
+      - POLL_INTERVAL=3600
+    volumes:
+      - ./jellyfin_strm:/jellyfin_strm
