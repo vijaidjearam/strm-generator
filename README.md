@@ -1,15 +1,15 @@
-# Debrid-Link STRM Generator for Jellyfin
+# Source-Provider STRM Generator for Jellyfin
 
-This project generates `.strm` files from your **Debrid-Link seedbox**
+This project generates `.strm` files from your **Source-Provider **
 and organizes them for **Jellyfin**.\
-It runs inside a Docker container, polls the Debrid-Link API every hour,
+It runs inside a Docker container, polls the Source-Provider API every hour,
 and writes stream URLs into `.strm` files that Jellyfin can index.
 
 ------------------------------------------------------------------------
 
 ## ✨ Features
 
--   Fetches media files from your Debrid-Link seedbox
+-   Fetches media files from your Source-Provider 
 -   Starts transcode sessions and retrieves stream URLs
 -   Builds `.strm` files in a Jellyfin-friendly structure:
     -   `Movies/Title (Year)/Title (Year).strm`
@@ -23,7 +23,7 @@ and writes stream URLs into `.strm` files that Jellyfin can index.
 
 -   Docker
 -   Docker Compose
--   A valid **Debrid-Link API Token**
+-   A valid **Source-Provider API Token**
 
 ------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ The container is configured via environment variables:
   ----------------------------------------------------------------------------
   Variable          Description                             Default
   ----------------- --------------------------------------- ------------------
-  `API_TOKEN`       Your Debrid-Link API token              (required)
+  `API_TOKEN`       Your Source-Provider API token              (required)
 
   `OUTPUT_DIR`      Path inside container to store `.strm`  `/jellyfin_strm`
 
