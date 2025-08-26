@@ -5,6 +5,8 @@ import requests
 from guessit import guessit
 from pathlib import Path
 import time
+#Todo
+# When transcodeLimitReached set the POLL_INTERVAL = 24 hrs
 
 # ==== CONFIG ====
 API_BASE = "https://debrid-link.com/api/v2"
