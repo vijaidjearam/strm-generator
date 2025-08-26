@@ -35,7 +35,7 @@ logging.basicConfig(
 
 
 def clean_filename(filename: str) -> str:
-    """Strip common site prefixes like 'www.1TamilMV.blue - ' or [www.Site.com] etc."""
+    """Strip common site prefixes like 'www.tamil.blue - ' or [www.Site.com] etc."""
     cleaned = re.sub(
         r'^(?:\[\s*www\.[\w.-]+\s*\]|\(\s*www\.[\w.-]+\s*\)|www\.[\w.-]+)\s*-\s*',
         '',
@@ -177,3 +177,4 @@ if __name__ == "__main__":
         generate_strm_files(limit=10)
         logging.info(f"Sleeping for {POLL_INTERVAL} seconds...")
         time.sleep(POLL_INTERVAL)
+
