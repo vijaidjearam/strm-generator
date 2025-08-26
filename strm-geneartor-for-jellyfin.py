@@ -12,7 +12,7 @@ import time
 API_BASE = "https://debrid-link.com/api/v2"
 # Override config with env vars
 API_TOKEN = os.getenv("API_TOKEN", "")
-OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "jellyfin_strm")
+OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "jellyfin_strm"))
 POLL_INTERVAL = int(os.getenv("POLL_INTERVAL", "3600"))  # default 1h
 
 # === Allowed media types ===
@@ -179,5 +179,6 @@ if __name__ == "__main__":
         generate_strm_files(limit=10)
         logging.info(f"Sleeping for {POLL_INTERVAL} seconds...")
         time.sleep(POLL_INTERVAL)
+
 
 
