@@ -5,7 +5,7 @@ RUN pip install requests guessit
 
 # Copy script
 WORKDIR /app
-COPY debrid-link-strm-geneartor-for-jellyfin.py /app/app.py
+COPY strm-geneartor-for-jellyfin.py /app/app.py
 
 # Set environment defaults
 ENV API_TOKEN=""
@@ -14,3 +14,4 @@ ENV POLL_INTERVAL=3600
 
 # Run
 CMD ["python", "app.py"]
+
