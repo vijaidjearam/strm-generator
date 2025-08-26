@@ -126,6 +126,3 @@ The workflow will build and publish to Docker Hub at:
 
 ------------------------------------------------------------------------
 
-
-
-MIT License
