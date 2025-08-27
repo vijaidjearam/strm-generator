@@ -160,7 +160,7 @@ def generate_strm_files(limit=10):
 
             if stream_url == "QUOTA_REACHED":
                 logging.warning("Stopping loop due to transcode quota reached.")
-                return
+                return "QUOTA_REACHED"   # <— return flag
 
             if not stream_url:
                 logging.error(f"Failed to get stream URL for {file_name}")
@@ -188,6 +188,7 @@ if __name__ == "__main__":
             logging.info(f"Sleeping for {next_interval} seconds...")
 
         time.sleep(next_interval)
+
 
 
 
