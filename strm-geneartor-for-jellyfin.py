@@ -176,9 +176,18 @@ def generate_strm_files(limit=10):
 
 if __name__ == "__main__":
     while True:
-        generate_strm_files(limit=10)
-        logging.info(f"Sleeping for {POLL_INTERVAL} seconds...")
-        time.sleep(POLL_INTERVAL)
+        # Run STRM generation
+        result = generate_strm_files(limit=10)
+
+        # If quota was reached, set next interval to 24h
+        if result == "QUOTA_REACHED":
+            next_interval = 86400  # 24 hours
+            logging.warning(f"Quota reached. Sleeping for {next_interval} seconds (24h).")
+        else:
+            next_interval = POLL_INTERVAL
+            logging.info(f"Sleeping for {next_interval} seconds...")
+
+        time.sleep(next_interval)
 
 
 
